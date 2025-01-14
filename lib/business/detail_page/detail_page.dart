@@ -1,6 +1,8 @@
+import 'dart:ui';
+
 import 'package:fijkplayer/fijkplayer.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_html/shims/dart_ui_real.dart';
+// import 'package:flutter_html/shims/dart_ui_real.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:open_eye/base/controller/base_controller.dart';

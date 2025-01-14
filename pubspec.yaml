@@ -85,16 +85,16 @@ dependencies:
   keframe: ^2.0.2
   #  图片缓存加载框架
   cached_network_image: ^3.2.0
-  extended_image: ^4.0.0
+  extended_image: ^4.2.1
   #  photo_view图片预览功能插件
-  photo_view: ^0.13.0
+  photo_view: ^0.15.0
   #  事件总线--EventBus
   event_bus: ^2.0.0
   #  轮播
   card_swiper: ^1.0.4
   #  播放器
-  fijkplayer: ^0.10.1
-  #Widget是否可见判断
+  fijkplayer: ^0.11.0
+  #Widget是否可见判断0
   visibility_detector: ^0.2.2
 #  #虚线绘制
   path_drawing: any

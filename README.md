@@ -1,4 +1,4 @@
-# Flutter版本open_eye（Flutter version 2.8.0）
+# Flutter版本open_eye（Flutter version 2.8.0） 目前可支持3.3.10
 
 Fluter版本开眼APP，具体包含功能如下：<br>
 1、整体项目架构基于Getx搭建，完成路由，依赖注入；<br>

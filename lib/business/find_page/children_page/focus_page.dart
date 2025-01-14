@@ -82,6 +82,10 @@ class FocusController extends BaseRefreshController<ApiService> {
       hideRefresh(refreshController);
     });
   }
+
+  @override
+  void onHidden() {
+  }
 }
 
 class FocusBinding extends Bindings {

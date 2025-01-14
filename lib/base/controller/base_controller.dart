@@ -168,6 +168,11 @@ abstract class BaseController<M> extends SuperController with ToastMixin {
   }
 
   @override
+  void onHidden() {
+    LogD('>>>>>>>onHidden');
+  }
+
+  @override
   void onClose() {
     super.onClose();
     //解订阅EventBus

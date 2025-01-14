@@ -1,7 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:keframe/size_cache_widget.dart';
+import 'package:keframe/keframe.dart';
 import 'package:open_eye/base/controller/base_refresh_controller.dart';
 import 'package:open_eye/base/pageWidget/base_stateful_widget.dart';
 import 'package:open_eye/business/home_page/model/Feed_entity.dart';
@@ -83,6 +83,11 @@ class HomeController extends BaseRefreshController<ApiService> {
       dataList.addAll(value.issueList![0].itemList ?? []);
       hideRefresh(refreshController);
     });
+  }
+
+  @override
+  void onHidden() {
+    // TODO: implement onHidden
   }
 }
 
