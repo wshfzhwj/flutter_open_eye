@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
@@ -25,8 +27,7 @@ class VideoListComponent extends BaseComponent<VideoListController> {
       shrinkWrap: true,
       itemBuilder: (BuildContext context, int index) {
         return Obx(() => GestureDetector(
-              child: ItemVideoDetailWidget(controller.dataList[index],
-                  controller.selectIndex.value, index),
+              child: ItemVideoDetailWidget(controller.dataList[index], controller.selectIndex.value, index),
               onTap: () {
                 if (index == controller.selectIndex.value) {
                   return;
@@ -60,6 +61,8 @@ class VideoListController extends BaseController<ApiService> {
   }
 
   void queryVideoDetail() {
+    Future.delayed(const Duration(milliseconds:1000));
+
     httpRequest<FocusEntity>(api.queryVideoDetail(videoId), (value) {
       var itemList = value.itemList ?? [];
       var tempList = <FocusItemEntity>[];

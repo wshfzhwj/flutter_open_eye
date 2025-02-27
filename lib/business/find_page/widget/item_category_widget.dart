@@ -17,7 +17,7 @@ class ItemCategoryWidget extends CommonStatelessWidget {
       height: 350.w,
       decoration: BoxDecoration(
           image:
-              DecorationImage(image: NetworkImage(itemData.bgPicture ?? ""))),
+              DecorationImage(image: NetworkImage(itemData.bgPicture?.replaceAll("http://img", "http://ali-img") ?? ""))),
       child: Text(
         itemData.name ?? "",
         style: TextStyle(

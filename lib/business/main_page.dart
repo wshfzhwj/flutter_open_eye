@@ -20,6 +20,7 @@ class MainPage extends BaseStatefulWidget<MainController> {
 
   @override
   Widget buildContent(BuildContext context) {
+    //拦截返回键（WillPopScope）
     return Obx(() => WillPopScope(
         child: Scaffold(
           body: KeepAliveWrapper(

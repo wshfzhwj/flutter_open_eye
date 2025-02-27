@@ -92,6 +92,7 @@ class ItemHomeWidget extends CommonStatelessWidget {
                   ),
                 ),
               ),
+              //角标
               Positioned(
                 top: 0,
                 left: 0,
@@ -113,6 +114,7 @@ class ItemHomeWidget extends CommonStatelessWidget {
               )
             ],
           ),
+          //下方头像 文字介绍
           SizedBox(
             height: 150.w,
             child: Row(

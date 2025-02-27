@@ -53,7 +53,7 @@ abstract class BaseStatefulWidget<T extends BaseController>
           onLoading: Center(
             child: LoadingWidget(),
           ),
-          onError: (error) => createErroWidget(controller, error),
+          onError: (error) => createErrorWidget(controller, error),
           onEmpty: createEmptyWidget(controller));
     } else {
       return buildContent(context);
@@ -108,7 +108,7 @@ class AutoDisposeState<T extends GetxController>
   void initState() {
     super.initState();
     if (widget.lifecycle != null) {
-      WidgetsBinding.instance?.addObserver(this);
+      WidgetsBinding.instance.addObserver(this);
     }
   }
 
@@ -116,7 +116,7 @@ class AutoDisposeState<T extends GetxController>
   void dispose() {
     Get.delete<T>(tag: widget.tag);
     if (widget.lifecycle != null) {
-      WidgetsBinding.instance?.removeObserver(this);
+      WidgetsBinding.instance.removeObserver(this);
     }
     super.dispose();
   }

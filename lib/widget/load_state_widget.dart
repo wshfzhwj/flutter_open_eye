@@ -95,7 +95,7 @@ SystemUiOverlayStyle systemOverLayoutStyle() {
 }
 
 ///异常布局
-Widget createErroWidget(BaseController controller, String? error) {
+Widget createErrorWidget(BaseController controller, String? error) {
   return Material(
       child: Center(
           widthFactor: double.infinity,
@@ -129,7 +129,7 @@ Widget createErroWidget(BaseController controller, String? error) {
           )));
 }
 
-Widget createCustomHoldreWidget(String? error, BaseController controller) {
+Widget createCustomHolderWidget(String? error, BaseController controller) {
   return Material(
       child: Center(
           widthFactor: double.infinity,

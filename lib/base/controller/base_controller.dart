@@ -14,7 +14,7 @@ import 'package:open_eye/utils/log_utils.dart';
 abstract class BaseController<M> extends SuperController with ToastMixin {
   late M api;
   late EventBus eventBus;
-  List<StreamSubscription>? _stremSubList;
+  List<StreamSubscription>? _streamSubList;
   RxString barTitleString = "标题".obs;
 
   @override
@@ -182,7 +182,7 @@ abstract class BaseController<M> extends SuperController with ToastMixin {
 
   ///解订阅StreamSubscription--关联EventBus
   void disposeEventBus() {
-    _stremSubList?.forEach((element) {
+    _streamSubList?.forEach((element) {
       element.cancel();
     });
   }
@@ -217,9 +217,9 @@ abstract class BaseController<M> extends SuperController with ToastMixin {
 
   ///管理Eventbus解订阅
   void addStremSub(StreamSubscription? streamSubscription) {
-    _stremSubList ??= [];
+    _streamSubList ??= [];
     if (streamSubscription != null) {
-      _stremSubList?.add(streamSubscription);
+      _streamSubList?.add(streamSubscription);
     }
   }
 }

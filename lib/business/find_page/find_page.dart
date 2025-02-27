@@ -91,7 +91,7 @@ class FindController extends BaseController with GetTickerProviderStateMixin {
     ),
     TopicPage(
       tagType: "home",
-    )
+    ),
   ];
 
   @override

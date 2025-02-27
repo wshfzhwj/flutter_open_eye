@@ -45,7 +45,7 @@ abstract class BaseStatelessWidget<T extends BaseController> extends GetView<T>
           onLoading: Center(
             child: LoadingWidget(),
           ),
-          onError: (error) => createErroWidget(controller, error),
+          onError: (error) => createErrorWidget(controller, error),
           onEmpty: createEmptyWidget(controller));
     } else {
       return buildContent(context);

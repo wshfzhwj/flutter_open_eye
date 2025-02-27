@@ -43,7 +43,8 @@ class TopicPage extends BaseStatelessWidget<TopicController> {
                 width: double.infinity,
                 height: 400.w,
                 child: BaseNetworkImage(
-                  controller.dataList[index].data?.image ?? "",
+                  controller.dataList[index].data?.image?.replaceAll("http://img", "http://ali-img"
+                      ".com/") ?? "",
                   fit: BoxFit.fitWidth,
                 ),
               ),
@@ -105,8 +106,10 @@ class TopicController extends BaseRefreshController<ApiService> {
         dataList.clear();
       }
       var itemList = value.itemList;
+      // LogD(">>>>>>>>>>>>>>itemList.isNotEmpty$itemList.isNotEmpty");
       if (itemList != null && itemList.isNotEmpty) {
         dataList.addAll(itemList);
+        LogD(">>>>>>>>>>>>>>itemList.isNotEmpty is running length = ${dataList.length}");
       }
       hideRefresh(refreshController);
     });
